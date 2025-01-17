@@ -11,16 +11,15 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static Item PINK_GARNET = null;
+    public static Item PINK_GARNET = registerItem("pink_garnet");
 
 
-    private static Item registerItem(String name, Item item) {
+    private static Item registerItem(String name) {
         Item.Settings itemSettings = new Item.Settings();
-        Identifier id = Identifier.of(TutorialMod.MOD_ID, "pink_garnet");
+        Identifier id = Identifier.of(TutorialMod.MOD_ID, name);
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
         Item.Settings settings = itemSettings.registryKey(key);
-        PINK_GARNET = new Item(settings);
-        return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), new Item(settings));
     }
 
     public static void registerModItems() {
