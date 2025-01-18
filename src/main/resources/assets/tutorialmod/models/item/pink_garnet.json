@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "minecarft:item/generated",
   "textures": {
     "layer0": "tutorialmod:item/pink_garnet"
   }
