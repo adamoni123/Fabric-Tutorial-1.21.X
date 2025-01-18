@@ -12,11 +12,11 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     private static Item registerBlockItem(String name, Block block) {
-        Block.Settings blockSettings = new Block.Settings();
+        Item.Settings itemSettings = new Item.Settings();
         Identifier id = Identifier.of(TutorialMod.MOD_ID, name);
-        RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, id);
-        Block.Settings settings = blockSettings.registryKey(key);
-        return Registry.register(Registries.BLOCK, Identifier.of(TutorialMod.MOD_ID, name), new block(settings));
+        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
+        Item.Settings settings = itemSettings.registryKey(key);
+        return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), new Item(settings));
 
     }
 
