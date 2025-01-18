@@ -11,7 +11,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static Item PINK_GARNET = registerItem("pink_garnet");
+    public static final Item PINK_GARNET = registerItem("pink_garnet");
 
 
     private static Item registerItem(String name) {
